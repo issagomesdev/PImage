@@ -41,6 +41,33 @@ the search and filter feature in the edit versioncan be found in the hidden menu
 
 ![image](https://user-images.githubusercontent.com/71194114/210372737-3efe0ddf-54b9-4545-b70b-167ffd762162.png)
 
+on the screen that was activated, use the search bar to filter pins by name.
+
+![image](https://user-images.githubusercontent.com/71194114/210374226-ab452a64-5a29-48d4-bcd8-f34cf7cff7e9.png)
+
+![image](https://user-images.githubusercontent.com/71194114/210374584-eac48b97-977e-44df-b221-223d2d65c438.png)
+
+and to locate an ip within the map just press the button next to it.
+
+![image](https://user-images.githubusercontent.com/71194114/210375731-7456d260-c51d-46fd-983e-e1166ac9a327.png)
+
+the pin you are looking for will change color, increase and decrease in size frequently to attract attention, if you want to stop this behavior just click on any corner within the image.
+
+![image](https://user-images.githubusercontent.com/71194114/210375908-e6978b95-06b9-41b2-bfaa-b42aabb14414.png)
+
+the eye button in the right corner of the screen, serves to hide the name of the pins when deactivated and show them when activated (by default it is deactivated).
+
+![image](https://user-images.githubusercontent.com/71194114/210376532-c3c4e7fe-37a1-48b1-8e0c-2e8e83702d68.png)
+
+![image](https://user-images.githubusercontent.com/71194114/210377608-6bcc0405-c604-4b7c-bac7-e024a6017478.png)
+
+![image](https://user-images.githubusercontent.com/71194114/210377714-e3381509-37a1-4977-be21-852702c8f46b.png)
+
+
+
+
+
+
 
 
 
