@@ -42,6 +42,7 @@ body {
   position: relative;
   width: 100%;
   border-radius: 2px;
+  cursor: copy;
 }
 
 #map img {
