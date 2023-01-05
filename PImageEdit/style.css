@@ -446,30 +446,6 @@ input:focus-visible {
 }
 }
 
-@media (max-width: 1126px) and (orientation: landscape) {
-  .content {
-    width: 50%;
-}
-}
-
-@media (max-width: 1016px) and (orientation: landscape) {
-  .content {
-    width: 55%;
-}
-}
-
-@media (max-width: 948px) and (orientation: landscape) {
-  .content {
-    width: 60%;
-}
-}
-
-@media (max-width: 882px) and (orientation: landscape) {
-  .content {
-    width: 65%;
-}
-}
-
 @media (pointer: coarse) {
   .bttn,
   .closeB {
