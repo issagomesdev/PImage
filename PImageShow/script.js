@@ -22,9 +22,108 @@ const mapContainer = document.querySelector("#map");
 const pinContainer = mapContainer.querySelector("#pins");
 const listPin = document.querySelector(".list-pins");
 
-pins.forEach((pin) => {
-  addPinElements(pin.id, pin.name, pin.x, pin.y);
-}); // load items of array
+const toPinElements = pins.map(function(pin) {
+  const pinInMap = document.createElement("div");
+  pinInMap.classList.add("pin");
+  pinInMap.setAttribute('data-id', pin.id);
+  pinInMap.setAttribute('data-name', pin.name);
+  pinInMap.setAttribute('data-x', pin.x);
+  pinInMap.setAttribute('data-y', pin.y);
+  pinInMap.style.left = `${pin.x}%`;
+  pinInMap.style.top = `${pin.y}%`;
+  const label = document.createElement("div");
+  label.classList.add("label");
+  label.setAttribute('label-id', pin.id);
+  label.innerHTML = pin.name;
+  pinInMap.append(label);
+
+  pinInMap.addEventListener("click", function () {
+    const selected = document.querySelector(".pin.selected");
+    if (selected) {
+      selected.classList.remove("selected");
+      selected.classList.remove("locate");
+      const id = selected.getAttribute("data-id");
+      document.querySelector(`[label-id="${id}"]`).style.display = "none";
+    } else {
+      pinInMap.classList.add("selected");
+      const id = pinInMap.getAttribute("data-id");
+      document.querySelector(`[label-id="${id}"]`).style.display = "flex";
+    }
+  }); // to select the pin
+
+  return pinInMap;
+  
+}); // load items of array in map
+
+pinContainer.append(...toPinElements);
+
+const toPinList = pins.map(function(pin) {
+  const pinInList = document.createElement("div");
+  pinInList.classList.add("pin-in-list");
+  pinInList.setAttribute('data-id', pin.id);
+  pinInList.setAttribute('data-name', pin.name);
+  const locate = document.createElement("div");
+  locate.classList.add("locate");
+  const bttn = document.createElement("div");
+  bttn.classList.add("bttn");
+  bttn.classList.add("inverse");
+  bttn.setAttribute('id', 'locate-pin-button');
+  bttn.innerHTML = '<i class="fa fa-location-dot"></i>';
+  const item = document.createElement("div");
+  item.classList.add("item");
+  const name = document.createElement("div");
+  name.classList.add("name");
+  const nameP = document.createElement("p");
+  nameP.innerHTML = pin.name;
+  const infos = document.createElement("div");
+  infos.classList.add("infos");
+  const p_id = document.createElement("p");
+  p_id.setAttribute('data-id', pin.id);
+  p_id.innerHTML = `id: ${pin.id}`;
+  const p_x = document.createElement("p");
+  p_x.innerHTML = `id: ${pin.x}`;
+  const p_y = document.createElement("p");
+  p_y.innerHTML = `id: ${pin.y}`;
+
+    pinInList.append(locate);
+    locate.append(bttn);
+    pinInList.append(item);
+    item.append(name);
+    item.append(infos);
+    item.append(infos);
+    name.append(nameP);
+    infos.append(p_id);
+    infos.append(p_x);
+    infos.append(p_y);
+
+    
+  bttn.addEventListener("click", () => {
+    const deselected = document.querySelector(".pin.selected");
+    const selected = document.querySelector(`[data-id="${pin.id}"]`);
+    if (deselected) {
+      deselected.classList.remove("selected");
+      deselected.classList.remove("locate");
+      const deselectedId = deselected.getAttribute("data-id");
+      document.querySelector(`[label-id="${deselectedId}"]`).style.display =
+        "none";
+      selected.classList.add("selected");
+      selected.classList.add("locate");
+      const selectedId = selected.getAttribute("data-id");
+      document.querySelector(`[label-id="${selectedId}"]`).style.display = "flex";
+    } else {
+      selected.classList.add("selected");
+      selected.classList.add("locate");
+      const selectedId = selected.getAttribute("data-id");
+      document.querySelector(`[label-id="${selectedId}"]`).style.display = "flex";
+    }
+    document.getElementById("filter-pin").style = "display: none;";	
+	  }); // to locate the pin
+
+  return pinInList;
+  
+}); // load items of array in list
+
+listPin.append(...toPinList);
 
 mapContainer.addEventListener("click", (event) => {
   if (event.target.classList.contains("pin")) {
@@ -38,46 +137,6 @@ mapContainer.addEventListener("click", (event) => {
     document.querySelector(`[label-id="${id}"]`).style.display = "none";
   }
 }); // deselect selected item on map
-
-function addPinElements(id, name, x, y) {
-  pinContainer.innerHTML += `<div class="pin" data-id="${id}" data-name="${name}" data-x="${x}" data-y="${y}" style="left: ${x}%; top: ${y}%;"> <div class="label" label-id="${id}"> ${name} </div>  </div>`;
-  listPin.innerHTML += `
-  <div class="pin-in-list" data-name="${name}" data-id="${id}"> 
-  <div class="locate"> 
-  <div class="bttn inverse" id="locate-pin-button" onclick="locateItem('${id}')"> 
-  <i class="fa fa-location-dot"></i> 
-  </div> 
-  </div> 
-  <div class="item">
-  <div class="name"> 
-  <p>${name}</p> 
-  </div> 
-  <div class="infos"> 
-  <p data-id="${id}">id: ${id}</p> 
-  <p data-x="${x}">x: ${x}</p> 
-  <p data-y="${y}">y: ${y}</p> 
-  </div> 
-  </div>
-  </div>`;
-
-  const pinElements = pinContainer.querySelectorAll(".pin");
-
-  pinElements.forEach((pinElement) => {
-    pinElement.addEventListener("click", function () {
-      const selected = document.querySelector(".pin.selected");
-      if (selected) {
-        selected.classList.remove("selected");
-        selected.classList.remove("locate");
-        const id = selected.getAttribute("data-id");
-        document.querySelector(`[label-id="${id}"]`).style.display = "none";
-      } else {
-        pinElement.classList.add("selected");
-        const id = pinElement.getAttribute("data-id");
-        document.querySelector(`[label-id="${id}"]`).style.display = "flex";
-      }
-    });
-  });
-} // function responsible for adding items in html
 
 const filterPinButton = document.getElementById("filter-pin-button");
 const closeFilter = document.getElementById("closeFilter");
@@ -106,25 +165,3 @@ searchInput.addEventListener("input", (e) => {
   items.forEach((item) => (item.style.display = "none"));
   Itemsfiltered.forEach((item) => (item.style.display = "flex"));
 }); // event responsible for search and filter items
-
-function locateItem(id) {
-  const deselected = document.querySelector(".pin.selected");
-  const selected = document.querySelector(`[data-id="${id}"]`);
-  if (deselected) {
-    deselected.classList.remove("selected");
-    deselected.classList.remove("locate");
-    const deselectedId = deselected.getAttribute("data-id");
-    document.querySelector(`[label-id="${deselectedId}"]`).style.display =
-      "none";
-    selected.classList.add("selected");
-    selected.classList.add("locate");
-    const selectedId = selected.getAttribute("data-id");
-    document.querySelector(`[label-id="${selectedId}"]`).style.display = "flex";
-  } else {
-    selected.classList.add("selected");
-    selected.classList.add("locate");
-    const selectedId = selected.getAttribute("data-id");
-    document.querySelector(`[label-id="${selectedId}"]`).style.display = "flex";
-  }
-  document.getElementById("filter-pin").style = "display: none;";
-} // function responsible to locate and mark item on map
