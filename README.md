@@ -53,7 +53,7 @@ on the screen that was activated, use the search bar to filter pins by name.
 
 ![image](https://user-images.githubusercontent.com/71194114/210374584-eac48b97-977e-44df-b221-223d2d65c438.png)
 
-and to locate an ip within the map just press the button next to it.
+and to locate an pin within the map just press the button next to it.
 
 ![image](https://user-images.githubusercontent.com/71194114/210375731-7456d260-c51d-46fd-983e-e1166ac9a327.png)
 
