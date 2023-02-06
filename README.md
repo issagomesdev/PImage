@@ -41,7 +41,7 @@ an editing screen will be activated, fill it with the desired name and save. for
 
 ![image](https://user-images.githubusercontent.com/71194114/210371357-499e378a-ca97-4473-95a3-e4b0724ba0de.png)
 
-  # 4. Search, filter and locate your pins
+  # 5. Search, filter and locate your pins
 
 the search and filter feature in the edit version can be found in the hidden menu and activated in the magnifying glass icon button. already in the view version it replaced the hidden menu, being necessary only to click on the same button in the right corner of the screen to activate it.
 
@@ -61,7 +61,7 @@ the pin you are looking for will change color, increase and decrease in size fre
 
 ![image](https://user-images.githubusercontent.com/71194114/210375908-e6978b95-06b9-41b2-bfaa-b42aabb14414.png)
 
-  # 5. Show and hide your pin names
+  # 6. Show and hide your pin names
 
 the eye button in the right corner of the screen, serves to hide the name of the pins when deactivated and show them when activated (by default it is deactivated).
 
@@ -71,7 +71,7 @@ the eye button in the right corner of the screen, serves to hide the name of the
 
 ![image](https://user-images.githubusercontent.com/71194114/210377714-e3381509-37a1-4977-be21-852702c8f46b.png)
 
-  # 6. Shortcut to the other mode
+  # 7. Shortcut to the other mode
 
 I added a button in each mode that maybe isn't very useful, it's a shortcut to the other mode, so if it's in edit mode it's directed to view mode and vice versa (as long as both are in the same folder).
 
