@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> PImage - Pins In Image </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+
+ <div class="content">
+
+    <div class="conteiners">
+
+        <div class="conteiner" onclick="window.location.href='./PImageEdit/index.html'">
+        <div class="fa-solid fa-pencil"> </div> 
+        <div class="text"> edit mode </div> 
+        </div>
+
+        <div class="conteiner" onclick="window.location.href='./PImageView/index.html'"> 
+        <div class="fa-solid fa-eye"> </div> 
+        <div class="text"> view mode </div> 
+        </div>
+
+        <div class="conteiner" onclick="window.location.href='./tutorial.html'"> 
+        <div class="fa-solid fa-info"> </div> 
+        <div class="text"> tutorial </div> 
+        </div>
+
+    </div>
+ 
+ </div>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            background: #e4e9f7;
+        }
+        
+        .content {
+        padding: 60px;
+        position: relative;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        .conteiners {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        }
+
+        .conteiner {
+        background-color: #f9f7f7;
+        margin: 10px;
+        width: 30%;
+        height: 15em;
+        border-radius: 2px;
+        box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+        display: flex;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        position: relative;
+        cursor: pointer;
+        }
+
+        .text {
+        font-size: 25px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        margin: 0 0 10px 0;
+        }
+
+        .fa-solid {
+        display: flex;
+        justify-content: center;
+        }
+
+        ::before {
+        font-size: 5em;
+        }
+
+        .conteiner:hover {
+        background-color: #efefef;
+        }
+
+        @media (pointer: coarse) {
+            .conteiner {
+            cursor: none;
+            }
+        }
+
+    </style>
+
+</body>
+
+</html>
