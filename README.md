@@ -29,11 +29,11 @@ Originally created for quick prototyping and local demonstrations, **PImage** is
 
 <h2 id="features">✨ Features</h2>
 
-- Toggle between Edit Mode and View Mode
 - Add, move, rename, or delete pins
 - Show/hide labels and pin icons
 - Integrated search functionality by pin name
 - Map-style background with pixel grid precision
+- Responsive layout optimized for all screen sizes
 
 <h2 id="structure">📁 Structure</h2>
 
@@ -77,5 +77,3 @@ A visual walkthrough is available in tutorial.html, showing how to:
 - Add and move pins
 - Rename or delete them
 - Use the search and visibility features
-
-The images used in the tutorial are located under assets/images/tutorial/.
