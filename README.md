@@ -4,7 +4,7 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-![Preview do site](https://pimage.byissa.tech/assets/images/tutorial/preview.png)
+![Preview do site](https://pimage.byissa.dev/assets/images/tutorial/preview.png)
 
 <p align="center">
   <a href="#about">About</a> •
@@ -25,7 +25,7 @@ Edit Mode: An editor allowing the addition, modification, and deletion of marker
 
 Originally created for quick prototyping and local demonstrations, **PImage** is ideal for use cases like cemetery mapping, visual seating charts, classroom layouts, or any image-based spatial representation.
 
-[![project](https://img.shields.io/badge/📱Visit_this_project-000?style=for-the-badge&logo=project)](https://pimage.byissa.tech)
+[![project](https://img.shields.io/badge/📱Visit_this_project-000?style=for-the-badge&logo=project)](https://pimage.byissa.dev)
 
 <h2 id="features">✨ Features</h2>
 
